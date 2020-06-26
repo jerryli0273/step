@@ -25,23 +25,38 @@
 }
 
 .topnav {
-  height: 275px;
-  overflow: hidden;
-  background-image: url('images/bluemountain.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%
+  height: 30px;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: right;
-  color: black;
+  color: grey;
   text-align: center;
+  line-height: 65px;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 20px;
   font-family: 'Cabin', Helvetica, Arial, sans-serif;
+}
+
+/* Style the top banner */
+.banner {
+    height: 500px;
+    background-image: url('images/greenmountain.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%
+}
+
+/* Style the name at the top of nav bar */
+.topnav a.name {
+    float: left;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20px;
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
 
 /* Change the color of links on hover */
@@ -58,23 +73,22 @@
 
 /*Change the font for h3 headers */
 h3 {
- color: black;
- font-family: 'Lobster', Georgia, Times, serif;
+ color: white;
+ font-family: 'Cabin', Helvetica, Arial, sans-serif;
  font-size: 70px;
- line-height: 150%;
+ line-height: 500px;
  vertical-align: middle;
+ text-align: center;
 }
 
 h1 {
     font-size: 30px;
     font-family: 'Cabin', Helvetica, Arial, sans-serif;
-    line-height: 150%;
 }
 
 h2 {
     font-size: 40px;
     font-family: 'Cabin', Helvetica, Arial, sans-serif;
-    line-height: 150%;
 }
 
 /* Change the font of paragraphs */
@@ -82,17 +96,16 @@ p {
  color: black;
  font-family: 'Cabin', Helvetica, Arial, sans-serif;
  font-size: 20px;
- line-height: 150%;
  vertical-align: middle;
 }
 
 /* Split the screen in half */
 .split {
-  height: 600px;
+  height: 630px;
   width: 50%;
   position: absolute;
   z-index: 1;
-  top: 275px;
+  top: 520px;
 }
 
 /* Split the screen in half for 2nd portion */
