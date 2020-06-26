@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <div class="topnav">
-      <a class="active" href="index.html">Home</a>
-      <a href="background.html">Background</a>
-      <a href="projects.html">Projects</a>
-      <a href="hobbies.html">Hobbies</a>
-  </div>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio - Jerry</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <script src="script.js"></script>
   </head>
-  <body>
-    <div id="content">
-      <h3>My Portfolio - Jerry</h3>
-      <p>This is my portfolio.</p>
-      <p>My name is Jerry Li, and I'm a sophomore at UC Berkeley studying computer
-          science and Business Administration. I like to golf, read, and travel. 
-          Below is a picture of me in New York City Traveling.
+  
+  <div class="topnav">
+      <a href="hobbies.html">Hobbies</a>
+      <a href="projects.html">Projects</a>
+      <a href="background.html">Background</a>
+      <a class="active" href="index.html">Home</a>
+      <h3 style="text-align:center;">My Portfolio</h3>
+  </div>
+
+
+  <body style="margin: 0;">
+      <div class="split left">
+      <div class="centered">
+          <img src="images/NYCphoto.JPG" alt="A picture of me standing in the oculus." 
+          class="center" style="width:285px;height:400px;">
+      </div>
+  </div>
+
+  <div class="split right">
+      <div class="centered">
+          <h1>Hello! My name is</h1>
+          <h1>JERRY LI</h1>
+          <p>I'm a sophomore at UC Berkeley studying Computer
+          Science and Business Administration. I like to golf, read, and travel. 
+          One the right is a picture of me in New York City traveling.
           </p>
-      <img src="images/NYCphoto.JPG" alt="A picture of me standing in the oculus." 
-      class="center" style="width:285px;height:400px;">
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>
+      </div>
+  </div>
   </body>
 </html>

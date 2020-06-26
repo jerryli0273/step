@@ -1,7 +1,15 @@
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 1000px;
+  height: 70%;
+}
+
+.sizable {
+    width: 1300px;
+    left: 50%;
+    background-color: #ddd;
+    height: 30%;
 }
 
 #greeting-container {
@@ -17,18 +25,23 @@
 }
 
 .topnav {
-  background-color: #333;
+  height: 275px;
   overflow: hidden;
+  background-image: url('images/bluemountain.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
-  color: #f2f2f2;
+  float: right;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
 
 /* Change the color of links on hover */
@@ -39,6 +52,78 @@
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: lightskyblue;
+  color: black;
+}
+
+/*Change the font for h3 headers */
+h3 {
+ color: black;
+ font-family: 'Lobster', Georgia, Times, serif;
+ font-size: 70px;
+ line-height: 150%;
+ vertical-align: middle;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    line-height: 150%;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    line-height: 150%;
+}
+
+/* Change the font of paragraphs */
+p {
+ color: black;
+ font-family: 'Cabin', Helvetica, Arial, sans-serif;
+ font-size: 20px;
+ line-height: 150%;
+ vertical-align: middle;
+}
+
+/* Split the screen in half */
+.split {
+  height: 600px;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 275px;
+}
+
+/* Split the screen in half for 2nd portion */
+.split2 {
+  height: 800px;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 675px;
+}
+
+/* Control the left side */
+.left {
+  left: 10%;
+}
+
+/* Control the right side */
+.right {
+  right: 10%;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.body {
+    background: #ddd;
 }

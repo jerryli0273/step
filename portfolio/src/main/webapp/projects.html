@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <div class="topnav">
-      <a class="active" href="index.html">Home</a>
-      <a href="background.html">Background</a>
-      <a href="projects.html">Projects</a>
-      <a href="hobbies.html">Hobbies</a>
-  </div>
+
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Jerry's Projects</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
+
+  <div class="topnav">
+      <a href="hobbies.html">Hobbies</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="background.html">Background</a>
+      <a href="index.html">Home</a>
+      <h3 style="text-align:center;">Projects</h3>
+  </div>
+ 
   <body>
-    <div id="content">
-      <h3>Projects</h3>
-      <p>The very first project that I worked on was a research project in high 
-          school with Professor Kaplinghat at UCI. With a team of 4, I analyzed data
-          from the SPARC galaxy database to compare the expected values of rotational 
-          velocity of stars versus their actual velocities. The discrepancy between
-          the two values originated from the existence of dark matter. Using all the 
-          data that we could get from the database, I modeled the distribution of dark
-          matter in various galaxies.  
-          </p>
-      <img src="images/Stars.jpg" alt="A picture of a beautiful night sky wiht purple
-      stars." class="center">
-    </div>
+      <div class="split left">
+          <div class="centered">
+              <img src="images/Stars.jpg" alt="A picture of a beautiful night sky with
+              purple stars." style="width:400px;height:300px;">
+          </div>
+      </div>
+
+      <div class="split right">
+          <div class="centered">
+              <p>The very first project that I worked on was a research project in high 
+                  school with Professor Kaplinghat at UCI. With a team of 4, I analyzed data
+                  from the SPARC galaxy database to compare the expected values of rotational 
+                  velocity of stars versus their actual velocities. The discrepancy between
+                  the two values originated from the existence of dark matter. Using all the 
+                  data that we could get from the database, I modeled the distribution of dark
+                  matter in various galaxies. 
+              </p>
+          </div>
+      </div>
+
+      <div class="split2 left">
+          <div class="centered">
+              <p>Later at Berkeley, I found the opportunity to experiment with hardware as well
+                  as software. The premise of the project is that there are "motes" which can
+                  detect fire through their temperature and humidity sensors located in areas
+                  prone to wild fires. Two other undergrads and I wrote the code to extract the 
+                  coordinates of a potential fire, then using those coordinates, we sent a request
+                  to a satellite company to take satellite pictures of the area in question. 
+              </p>
+          </div>
+      </div>
+
+      <div class="split2 right">
+          <div class="centered">
+              <img src="images/wildfire.jpg" alt="A picture of a wild fire."
+               style="width:400px;height:300px;">
+          </div>
+      </div>
   </body>
 </html>

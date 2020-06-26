@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <div class="topnav">
-      <a class="active" href="index.html">Home</a>
-      <a href="background.html">Background</a>
-      <a href="projects.html">Projects</a>
-      <a href="hobbies.html">Hobbies</a>
-  </div>
+
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Jerry's Background</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
+
+  <div class="topnav">
+      <a href="hobbies.html">Hobbies</a>
+      <a href="projects.html">Projects</a>
+      <a class="active" href="background.html">Background</a>
+      <a href="index.html">Home</a>
+      <h3 style="text-align:center;">Background</h3>
+  </div>
+
   <body>
-    <div id="content">
-      <h3>Background</h3>
-      <p>Hello all! I'm Jerry Li, and I'm a sophomore at UC Berkeley studying CS
-          and Business Administration. I was born in Irvine, California. However,
-          when I was about two months old my family moved to Beijing, and I spent
-          the next 12 years growing up there. In middle school, I moved back to 
-          Irvine to continue school. I really enjoyed getting to experience both
-          cultures first-hand as I believe I have gained perspective from this
-          transition. 
-      </p>
-      <img src="images/Beijing.jpg" alt="A nighttime skyline picture in Beijing." 
-      class="center">
-      <p>In the past, I've interned for both tech roles and finance roles, and I am
-          currently trying to figure out a solid career path to me to truly enjoy
-          what I do daily. In working for a startup called Obviously AI as an AI 
-          mining intern, I felt immense gratification seeing the python scripts be 
-          used to guage the performance of the company. And as a consultant for
-          Alipay, it was eye-opening to see the immediate effects of planning a
-          successful promotional event. In this STEP internship I hope to immerse
-          myself in the tech space and see what being a full-time SWE would entail.
-      </p>
-    </div>
+      <div class="split left">
+          <div class="centered">
+              <img src="images/Beijing.jpg" alt="A nighttime skyline picture in Beijing." 
+              class="center" style="width:400px;height:300px;">
+          </div>
+      </div>
+
+      <div class="split right">
+          <div class="centered">
+              <p>I was born in Irvine, California. However, when I was about 
+                  two months old my family moved to Beijing, and I spent
+                  the next 12 years growing up there. In middle school, I moved back to 
+                  Irvine to continue school. I really enjoyed getting to experience both
+                  cultures first-hand as I believe I have gained perspective from this
+                  transition. 
+              </p>
+          </div>
+      </div>
+
+      <div class="split2 left">
+          <div class="centered">
+              <p>In the past, I've interned for both tech roles and finance roles, and I am
+                  currently trying to figure out a solid career path to me to truly enjoy
+                  what I do daily. In working for a startup called Obviously AI as an AI 
+                  mining intern, I felt immense gratification seeing the python scripts be 
+                  used to guage the performance of the company. And as a consultant for
+                  Alipay, it was eye-opening to see the immediate effects of planning a
+                  successful promotional event. In this STEP internship I hope to immerse
+                  myself in the tech space and see what being a full-time SWE would entail.
+              </p>
+          </div>
+      </div>
+
+      <div class="split2 right">
+          <div class="centered">
+              <img src="images/cs.jpg" alt="A picture of a screen of code." 
+                   class="center" style="width:400px;height:300px;">
+          </div>
+      </div>
+    
   </body>
 </html>
