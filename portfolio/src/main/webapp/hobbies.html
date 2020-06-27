@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-  <div class="topnav">
-      <a href="index.html">Home</a>
-      <a href="background.html">Background</a>
-      <a href="projects.html">Projects</a>
-      <a class="active" href="hobbies.html">Hobbies</a>
-  </div>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Jerry's Hobbies</title>
+    <title>Hobbies</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
-    <style>
-      body {
-          background-image: url('images/darkbg.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: 100% 100%
-          }
-    </style>
-    <div id="content">
-      <h3 style="text-align:center;">Hobbies</h3>
+
+  <div class="topnav">
+      <a class="name" href="index.html">Jerry Li</a>
+      <a class="active" href="hobbies.html">Hobbies</a>
+      <a href="projects.html">Projects</a>
+      <a href="background.html">Background</a>
+      <a href="index.html">Home</a>
+  </div><div class="banner2">
+      <h3>My Hobbies</h3>
+      </div>
+  
+  <body style="margin:10px">
+    <div class="split left">
+        <img src="images/golf.jpg" alt="A picture of a golf player putting with the
+      sea as the background." align="right" style="width:450px;height:340px;">
+    </div>
+    <div class="split right">
+        <div class="lefted">
       <p>One thing that I enjoy to do the most is golfing in my free time. Growing
           up, my father was an avid golfer, and he would bring me to the range to 
           practice once in a while. However, joining the golf team in high school 
@@ -34,9 +35,12 @@
           friends to mess around. And even in quarantine, I would go to my friend's
           house to play golf on his golf simulator.
           </p>
-      <img src="images/golf.jpg" alt="A picture of a golf player putting with the
-      sea as the background." class="center">
-      <p>Another thing that I spend a lot of time doing is watching YouTube. It is
+        </div>
+    </div>
+
+    <div class="split2 left">
+        <div class="righted">
+            <p>Another thing that I spend a lot of time doing is watching YouTube. It is
           scary to me how good the recommendation algorithm is on YouTube because
           I cannot seem to resist the content presented to me. I don't have a very
           particular type of videos that I watch, but if you look through my watch
@@ -46,7 +50,11 @@
           My rationale was: if I already spend this much time on it, I might as well
           contribute to it myself.
           </p>
-      <img src="images/youtube.png" alt="A picture of the YouTube logo." class="center">
+        </div>
+    </div>
+    <div class="split2 right">
+      <img src="images/youtube.png" alt="A picture of the YouTube logo." 
+      align="left" style="width:450px;height:200px;">
     </div>
   </body>
 </html>
