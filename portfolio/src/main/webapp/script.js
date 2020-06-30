@@ -27,3 +27,13 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+/**
+ * Fetches the information on the /data page and presents it in the fetch
+ * containter.
+ */
+async function getFetch() {
+  const response = await fetch('/data');
+  const fetchResponse = await response.text();
+  document.getElementById('fetch-container').innerText = fetchResponse;
+}
