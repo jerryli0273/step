@@ -32,10 +32,11 @@ function addRandomGreeting() {
  * Fetches the information on the /data page and presents it in the fetch
  * containter.
  */
-async function getFetch() {
-  const response = await fetch('/data');
+async function getComment() {
+  const numComments = document.getElementById("numComments").value;
+  const response = await fetch('/data?numComments=' + numComments);
   const fetchResponse = await response.json();
-  const output = document.getElementById('fetch-container');
+  const output = document.getElementById('comment-container');
   output.innerHTML = '';
   var i;
   for (i = 0; i < fetchResponse.length; i++) {
@@ -47,6 +48,25 @@ async function getFetch() {
 /** Creates an <li> element containing text. */
 function createListElement(text) {
   const liElement = document.createElement('li');
-  liElement.innerText = text;
+
+  const commentElement = document.createElement('span');
+  commentElement.innerText = text.body;
+
+  const deleteButtonElement = document.createElement('button');
+  deleteButtonElement.innerText = 'Delete';
+  deleteButtonElement.addEventListener('click', () => {
+      deleteComment(text);
+      liElement.remove();
+  });
+
+  liElement.appendChild(commentElement);
+  liElement.appendChild(deleteButtonElement);
   return liElement;
+}
+
+/** Tells server to delete a comment. */
+function deleteComment(text) {
+    const params = new URLSearchParams;
+    params.append('commentId', text.id);
+    fetch('/delete-comment', {method: 'POST', body: params});
 }

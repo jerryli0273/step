@@ -14,6 +14,7 @@
 	<link href="style.css" rel="stylesheet">
     <script src="script.js"></script> 
 </head>
+
 <body>
 
 <!-- Navigation -->
@@ -40,6 +41,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#connect">Connect</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#comment">Comment</a>
                 </li>
             </ul> 
     </div>
@@ -234,18 +238,57 @@
 </div>
 </div>
 
-<button onclick="getFetch()">Fetch!</button>
-<div class="col-lg-6" id="fetch-container"></div>
+<!--- Comments Header-->
+<a id="comment"></a>
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+    <div class="col-12">
+        <h1 class="display-4">Comments</h1>
+    </div>
+    <hr>
+</div>
+</div>
 
-<form action="/data" method="POST">
+<!--- Show comments section -->
+<div class="container-fluid padding">
+<div class="row padding">
+  <div class="col-md-6" style="text-align:center" style=
+  "vertical-align:middle">
+  <label for="numComments">Choose number of comment you 
+      want to see:</label>
 
-      <p>Enter your name and your comment separated by a comma:</p>
+  <select name="numComments" id="numComments">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+
+  <button onclick="getComment()">Show existing comments!</button>
+  </div>
+
+  <div class="col-lg-6" id="comment-container"></div>
+</div>
+</div>
+
+  
+<!--- Add comments section -->
+<div class="container-fluid padding">
+<div class="row padding">
+  <div class="col-md-12" style="text-align:center">
+  <form action="/data" method="POST">
+
+      <p>Please enter your comment</p>
       <textarea name="text-input">enter here</textarea>
       <br/><br/>
 
       <input type="submit" />
-</form>
-
+  </form>
+  <ul id="task-list"></ul>
+  </div>
+</div>
+</div>
 
 <!--- Connect -->
 <a id="connect"></a>
