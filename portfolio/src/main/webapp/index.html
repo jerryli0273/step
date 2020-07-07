@@ -1,18 +1,366 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+<html lang="en">
+
+<!-- Styling using Bootstrap and other libraries -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jerry's Portfolio</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script> 
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="images/brand.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+    data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#background">Background</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#hobbies">Hobbies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#questions">Questions?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#comment">Comment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#connect">Connect</a>
+                </li>
+            </ul> 
     </div>
-  </body>
+</div>
+</nav>
+
+<!--- Welcome Section -->
+<div class="banner">
+        <h5>Hey! I'm Jerry!</h5>
+</div>
+
+<div class="container-fluid padding">
+<div class="row welcome text-center first">
+    <hr>
+    <div class="col-12">
+        <p class="lead">Welcome to my portfolio! I am based in the San Francisco 
+            Bay Area, and if you share similar interests or passions, 
+            please reach out to me! I would love to meet new people and learn 
+            from others. </p>
+    </div>
+</div>
+</div>
+
+<!--- Brief Inroduction -->
+<div class="containter-fluid padding">
+<div class="row text-center padding">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Student</h3>
+        <p>Sophomore at UC Berkeley, Regents Scholar.</p> 
+    </div>    
+    <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fas fa-terminal"></i>
+        <h3>CS Major</h3>
+        <p>Declared Computer Science major. Java, Python, SQL.</p> 
+    </div> 
+    <div class="col-sm-12 col-md-4">
+        <i class="fas fa-briefcase"></i>
+        <h3>Business Major</h3>
+        <p>Intended Business Administration major for Haas school
+            of business.</p> 
+    </div>  
+</div>
+<hr class="my-4"
+</div>     
+
+<!--- Background header -->
+<a id="background"></a>
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+    <div class="col-12">
+        <h1 class="display-4">Background</h1>
+    </div>
+    <hr>
+</div>
+</div>
+
+<!--- Beijing Background -->
+<div class="container-fluid padding">
+<div class="row padding">
+    <div class="col-lg-6">
+        <h2>Beijing</h2>
+        <p> I was born in Irvine, California. However, when I was about 
+            two months old my family moved to Beijing, and I spent
+            the next 12 years growing up there. </p>
+        <p> In middle school, I moved back to 
+            Irvine to continue school. I really enjoyed getting to experience both
+            cultures first-hand as I believe I have gained perspective from this
+            transition. </p>
+    </div>
+    <div class="col-lg-6">
+        <img src="images/Beijing.jpg" class="img-fluid">
+    </div>
+</div>
+</div>
+
+<!--- Academics Background -->
+<div class="container-fluid padding">
+<div class="row padding">
+    <div class="col-lg-6">
+        <img src="images/alipay.jpg" class="img-fluid">
+    </div>
+    <div class="col-lg-6">
+        <h2>Academic background</h2>
+        <p> In the past, I've interned for both tech roles and finance roles, and I am
+            currently trying to figure out a solid career path to me to truly enjoy
+            what I do daily. In working for a startup called Obviously AI as an AI 
+            mining intern, I felt immense gratification seeing the python scripts be 
+            used to guage the performance of the company.</p>
+        <p> And as a consultant for Alipay, it was eye-opening to see the immediate 
+            effects of planning a successful promotional event. In this STEP internship 
+            I hope to immerse myself in the tech space and see what being a full-time 
+            SWE would entail.</p>
+    </div>
+</div>
+</div>
+
+
+  
+<!--- Projects -->
+<a id="projects"></a>
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+    <div class="col-12">
+        <h1 class="display-4">Projects</h1>
+    </div>
+    <hr>
+</div>
+</div>
+
+<!--- Project section -->
+<div class="container-fluid padding">
+<div class="row padding">
+    <div class="col-md-6">
+        <div class="card">
+            <img class="card-img-top" src="images/Stars.jpg">
+            <div class="card-body">
+                <h4 class="card-title">UCI Research</h4>
+                <p class="card-text">A project invovling analyzing rotational velocities
+                    of star bodies to model dark matter.</p>
+                <a href="projects.html" class="btn btn-outline-secondary">More details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <img class="card-img-top" src="images/wildfire.jpg">
+            <div class="card-body">
+                <h4 class="card-title">UCB Research</h4>
+                <p class="card-text">A project invovling using small devices
+                     to detect fire as early as possible and request 
+                    satellite images.</p>
+                <a href="projects.html" class="btn btn-outline-secondary">More details</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!--- Hobbies header -->
+<a id="hobbies"></a>
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+    <div class="col-12">
+        <h1 class="display-4">Hobbies</h1>
+    </div>
+    <hr>
+</div>
+</div>
+
+<!--- Golfing hobby -->
+<div class="container-fluid padding">
+<div class="row padding">
+    <div class="col-lg-6">
+        <h2>Golfing</h2>
+        <p> One thing that I enjoy to do the most is golfing in my free time. Growing
+          up, my father was an avid golfer, and he would bring me to the range to 
+          practice once in a while. However, joining the golf team in high school 
+          was when I really started to love golf. </p>
+        <p> During times when I am stressed
+          or tense, I'd be able to walk onto the golf course to relax and find some
+          serenity. Even in college, I would go to the course once in a while with 
+          friends to mess around. And even in quarantine, I would go to my friend's
+          house to play golf on his golf simulator. </p>
+    </div>
+    <div class="col-lg-6">
+        <img src="images/golf.jpg" class="img-fluid">
+    </div>
+</div>
+</div>
+
+<!--- Academics Background -->
+<div class="container-fluid padding">
+<div class="row padding">
+    <div class="col-lg-6">
+        <img src="images/youtube.png" class="img-fluid">
+    </div>
+    <div class="col-lg-6">
+        <h2>Youtube</h2>
+        <p> Another thing that I spend a lot of time doing is watching YouTube. It is
+          scary to me how good the recommendation algorithm is on YouTube because
+          I cannot seem to resist the content presented to me. I don't have a very
+          particular type of videos that I watch, but if you look through my watch
+          history, there will be fishing videos, political commentary videos, and 
+          even some episodes of Family Guy. </p>
+        <p> It was quite funny to me that I was 
+          originally supposed to work on a load test for YouTube over the summer. 
+          My rationale was: if I already spend this much time on it, I might as well
+          contribute to it myself. </p>
+    </div>
+</div>
+</div>
+
+<!--- Charts Header-->
+<a id="questions"></a>
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+    <div class="col-12">
+        <h1 class="display-4">Questions</h1>
+    </div>
+    <hr>
+</div>
+</div>
+
+<!--- charts body -->
+<div class="container-fluid padding">
+<div class="row padding">
+    <div class="col-md-6" style="text-align:center">
+      <p>What would you like to learn more about?</p>
+      <form action="/question-data" method="POST">
+      <select name="question">
+        <option value="Background">Background</option>
+        <option value="Projects">Projects</option>
+        <option value="Interests">Interests</option>
+        <option value="Hobbies">Hobbies</option>
+        <option value="College">College</option>
+      </select>
+      <button>Submit</button>
+    </form>
+    </div>
+    
+    <div class="col-md-6" style="text-align:center">
+      <div id="chart-container"></div>
+    </div>
+</div>
+</div>
+
+<!--- Comments Header-->
+<a id="comment"></a>
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+    <div class="col-12">
+        <h1 class="display-4">Comments</h1>
+    </div>
+    <hr>
+</div>
+</div>
+
+
+<!--- Show comments section -->
+<div class="container-fluid padding">
+<div class="row padding">
+  <div class="col-md-6" style="text-align:center" style=
+  "vertical-align:middle">
+  <label for="numComments">Choose number of comment you 
+      want to see:</label>
+
+  <select name="numComments" id="numComments">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+
+  <button onclick="getComment()">Show existing comments!</button>
+  </div>
+
+  <div class="col-lg-6" id="comment-container"></div>
+</div>
+</div>
+
+  
+<!--- Add comments section -->
+<div class="container-fluid padding">
+<div class="row padding">
+  <div class="col-md-12" style="text-align:center">
+  <form action="/data" method="POST">
+
+      <p>Please enter your comment</p>
+      <textarea name="text-input">enter here</textarea>
+      <br/><br/>
+
+      <input type="submit" />
+  </form>
+  <ul id="task-list"></ul>
+  </div>
+</div>
+</div>
+
+<!--- Connect -->
+<a id="connect"></a>
+<div class="container-fluid padding">
+<div class="row text-center padding">
+    <div class="col-12">
+        <h2>Connect</h2>
+    </div>
+    <div class="col-12 social padding">
+        <a href="https://www.facebook.com/profile.php?id=100007439029218"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/jerryli0273/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/jerry-l-179180154/"><i class="fab fa-linkedin"></i></a>
+    </div>
+</div>
+    <hr class="my-4">
+</div>
+<!--- Footer -->
+<footer>
+<div class="container-fluid padding">
+<div class="row text-center">
+    <div class="col-md-12">
+        <img src="images/brand.png">
+        <hr class="light">
+        <p>949-532-8698</p>
+        <p>jerryli0273@gmail.com</p>
+        <p>lijer@google.com</p>
+        <p>Irvine, California</p>
+    </div>
+</div>
+</div>
+
+</body>
 </html>
+
+
+
