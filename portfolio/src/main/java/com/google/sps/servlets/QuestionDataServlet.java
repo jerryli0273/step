@@ -22,10 +22,23 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/question-data")
 public class QuestionDataServlet extends HttpServlet {
 
-  private Map<String, Integer> questionVotes = new HashMap<>();
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    
+    Map<String, Integer> questionVotes = new HashMap<>();
+    
+    Query query = new Query("Question").addSort("type", SortDirection.DESCENDING);
+    
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    PreparedQuery results = datastore.prepare(query);
+
+    for (Entity e: results.asIterable()) {
+        String q = (String) e.getProperty("type");
+        int currentVotes = questionVotes.containsKey(q) ? questionVotes.get(q) : 0;
+        questionVotes.put(q, currentVotes + 1);
+    }
+
     response.setContentType("application/json");
     Gson gson = new Gson();
     String json = gson.toJson(questionVotes);
@@ -35,9 +48,12 @@ public class QuestionDataServlet extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String q = request.getParameter("question");
-    
-    int currentVotes = questionVotes.containsKey(q) ? questionVotes.get(q) : 0;
-    questionVotes.put(q, currentVotes + 1);
+
+    Entity questionEntity = new Entity("Question");
+    questionEntity.setProperty("type", q);
+
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    datastore.put(questionEntity);
 
     response.sendRedirect("/index.html#questions");
   }
