@@ -11,7 +11,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="style.css" rel="stylesheet">
     <script src="script.js"></script> 
 </head>
 
@@ -40,10 +41,13 @@
                     <a class="nav-link" href="#hobbies">Hobbies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#connect">Connect</a>
+                    <a class="nav-link" href="#questions">Questions?</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#comment">Comment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#connect">Connect</a>
                 </li>
             </ul> 
     </div>
@@ -238,6 +242,40 @@
 </div>
 </div>
 
+<!--- Charts Header-->
+<a id="questions"></a>
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+    <div class="col-12">
+        <h1 class="display-4">Questions</h1>
+    </div>
+    <hr>
+</div>
+</div>
+
+<!--- charts body -->
+<div class="container-fluid padding">
+<div class="row padding">
+    <div class="col-md-6" style="text-align:center">
+      <p>What would you like to learn more about?</p>
+      <form action="/question-data" method="POST">
+      <select name="question">
+        <option value="Background">Background</option>
+        <option value="Projects">Projects</option>
+        <option value="Interests">Interests</option>
+        <option value="Hobbies">Hobbies</option>
+        <option value="College">College</option>
+      </select>
+      <button>Submit</button>
+    </form>
+    </div>
+    
+    <div class="col-md-6" style="text-align:center">
+      <div id="chart-container"></div>
+    </div>
+</div>
+</div>
+
 <!--- Comments Header-->
 <a id="comment"></a>
 <div class="container-fluid padding">
@@ -248,6 +286,7 @@
     <hr>
 </div>
 </div>
+
 
 <!--- Show comments section -->
 <div class="container-fluid padding">

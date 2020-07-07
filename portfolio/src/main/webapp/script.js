@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/** Imports charts API.  */
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
 /**
  * Adds a random greeting to the page.
  */
@@ -69,4 +73,27 @@ function deleteComment(text) {
     const params = new URLSearchParams;
     params.append('commentId', text.id);
     fetch('/delete-comment', {method: 'POST', body: params});
+}
+
+/** Creates a chart and adds it to the page. */
+function drawChart() {
+  fetch('/question-data').then(response => response.json())
+  .then((questionVotes) => {
+    const data = new google.visualization.DataTable();
+    data.addColumn('string', 'Question');
+    data.addColumn('number', 'Votes');
+    Object.keys(questionVotes).forEach((question) => {
+      data.addRow([question, questionVotes[question]]);
+    });
+
+    const options = {
+      'title': 'Asked Questions',
+      'width':600,
+      'height':500
+    };
+
+    const chart = new google.visualization.ColumnChart(
+        document.getElementById('chart-container'));
+    chart.draw(data, options);
+  });
 }
