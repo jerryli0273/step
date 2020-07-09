@@ -38,14 +38,15 @@ function addRandomGreeting() {
  */
 async function getComment() {
   const numComments = document.getElementById("numComments").value;
-  const response = await fetch('/data?numComments=' + numComments);
+  const langComments = document.getElementById("langComments").value;
+  const response = await fetch('/data?numComments=' + numComments 
+  + '&langComments=' + langComments);
   const fetchResponse = await response.json();
   const output = document.getElementById('comment-container');
   output.innerHTML = '';
   var i;
   for (i = 0; i < fetchResponse.length; i++) {
-    output.appendChild(
-      createListElement(fetchResponse[i]));
+    output.appendChild(createListElement(fetchResponse[i]));
   }
 }
 
@@ -54,7 +55,7 @@ function createListElement(text) {
   const liElement = document.createElement('li');
 
   const commentElement = document.createElement('span');
-  commentElement.innerText = text.body;
+  commentElement.innerText = text.body + ' ';
 
   const deleteButtonElement = document.createElement('button');
   deleteButtonElement.innerText = 'Delete';

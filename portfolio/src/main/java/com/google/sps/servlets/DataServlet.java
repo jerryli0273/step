@@ -22,6 +22,9 @@ import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Query.SortDirection;
+import com.google.cloud.translate.Translate;
+import com.google.cloud.translate.TranslateOptions;
+import com.google.cloud.translate.Translation;
 import com.google.gson.Gson;
 import com.google.sps.comment.Comment;
 import java.io.IOException;
@@ -35,10 +38,8 @@ import javax.servlet.http.HttpServletResponse;
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
-    
-  private ArrayList<String> jsonComments = new ArrayList<String>();
 
-  @Override
+@Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     
     Query query = new Query("Comment").addSort("timestamp", SortDirection.DESCENDING);
@@ -47,22 +48,31 @@ public class DataServlet extends HttpServlet {
     PreparedQuery results = datastore.prepare(query);
     
     int numComments = getNumComments(request);
+    String langComments = request.getParameter("langComments");
+    Translate translate = TranslateOptions.getDefaultInstance().getService();
+    
     ArrayList<Comment> comments = new ArrayList<>();
     for (Entity entity : results.asIterable()) {
       long id = entity.getKey().getId();
       String commentBody = (String) entity.getProperty("body");
       long timestamp= (long) entity.getProperty("timestamp");
-      Comment comment = new Comment(id, commentBody, timestamp);
+      
+      Translation translation =
+        translate.translate(commentBody, Translate.TranslateOption.targetLanguage(langComments));
+      String translatedText = translation.getTranslatedText();
+      Comment comment = new Comment(id, translatedText, timestamp);
       if (numComments > 0) {
         comments.add(comment);
         numComments--;
       }
     }
     Gson gson = new Gson();
-
-    response.setContentType("application/json;");
+ 
+    response.setContentType("application/json; charset=UTF-8");
+    response.setCharacterEncoding("UTF-8"); 
     response.getWriter().println(gson.toJson(comments));
   }
+
 
   /**
    * Converts an ArrayList instance into a JSON string using the Gson library.
