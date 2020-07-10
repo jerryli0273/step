@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <!-- Styling using Bootstrap and other libraries -->
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -91,7 +91,7 @@
             of business.</p> 
     </div>  
 </div>
-<hr class="my-4"
+<hr class="my-4">
 </div>     
 
 <!--- Background header -->
@@ -291,7 +291,7 @@
 <div class="row padding">
   <div class="col-md-6" style="text-align:right">
 <label for="langComments">Choose the language you want to
-     see the comments in: </right>
+     see the comments in: </label>
   <select name="langComments" id="langComments" class="selectpicker">
     <option value="en">English</option>
     <option value="zh">Chinese</option>
@@ -320,7 +320,7 @@
   <button onclick="getComment()" 
   class="btn btn-outline-primary">Show comments!</button>
   </div> 
-  <br></br> 
+  <br>
   <div style="margin:auto; width:300px;" 
   id="comment-container"></div> 
 </div>
@@ -334,9 +334,9 @@
 
       <p>Please enter your comment</p>
       <textarea name="text-input"></textarea>
-      <br/><br/>
+      <br><br/>
 
-      <input type="submit" />
+      <input class="btn btn-outline-primary" type="submit" />
   </form>
   <ul id="task-list"></ul>
   </div>
@@ -372,6 +372,7 @@
     </div>
 </div>
 </div>
+</footer>
 
 </body>
 </html>
