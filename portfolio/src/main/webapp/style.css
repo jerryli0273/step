@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
 
 /* Style entire website */
 html, body {
     height: 100%;
     width: 100%;
-    font-family: 'Poppins', sans-serif;
     color: #222;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 /* Style navigation bar */
@@ -164,7 +164,8 @@ h5 {
  
 /* If you want the content centered horizontally and vertically */
 .centered {
-  position: absolute;
+  position: relative;
+  height: 300px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
