@@ -47,7 +47,7 @@ public class DataServlet extends HttpServlet {
 		PreparedQuery results = datastore.prepare(query);
 
 		int numComments = getNumComments(request);
-		String langComments = request.getParameter("langComments");
+		String languageForComments = request.getParameter("languageForComments");
 		Translate translate = TranslateOptions.getDefaultInstance().getService();
 
 		ArrayList < Comment > comments = new ArrayList < >();
@@ -56,7 +56,7 @@ public class DataServlet extends HttpServlet {
 			String commentBody = (String) entity.getProperty("body");
 			long timestamp = (long) entity.getProperty("timestamp");
 
-			Translation translation = translate.translate(commentBody, Translate.TranslateOption.targetLanguage(langComments));
+			Translation translation = translate.translate(commentBody, Translate.TranslateOption.targetLanguage(languageForComments));
 			String translatedText = translation.getTranslatedText();
 			Comment comment = new Comment(id, translatedText, timestamp);
 			if (numComments > 0) {

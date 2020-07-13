@@ -22,9 +22,9 @@ google.charts.setOnLoadCallback(drawChart);
  */
 async function getComment() {
   const numComments = document.getElementById('numComments').value;
-  const langComments = document.getElementById('langComments').value;
+  const languageForComments = document.getElementById('languageForComments').value;
   const response = await fetch('/data?numComments=' + numComments +
-  '&langComments=' + langComments);
+  '&languageForComments=' + languageForComments);
   const fetchResponse = await response.json();
   const output = document.getElementById('comment-container');
   output.innerHTML = '';

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "lijer-step-2020",
+  "private_key_id": "c8136f168ec89dfc974834801d26b6216486c5bc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCVan9wX5L/jvjN\nVaCbOr6hYBu6LIxTKO/rL+CaNh70w5tGuC68JE7oAjh4jlRXST7L3M8T/niFaNjN\nalRzel5qSHb7+G0JH4LVIdzgIlkVZHh+9SzhVAi+28AMFYH0qZ+Q68iL4577NQrp\n2mO0BCrpHfhSRdhyOatKrEXq/SAxD1vMoXMXIF69BHOopMcQ3Xe8dFLdEk3CDpvQ\ndYUksRLM1crr6vCL+xSwS0k5FG32LppnNMHbz8HzK3GWZghVrqTSVkBcngiDGytp\ntcKAXkqqP2TXRG791SxjnYv2WkgJZfOhcBdFiY7Ccy6D0WmB2dJSurNaiJVRBYw9\nKdUkLQCBAgMBAAECggEABRAiiN+INuY0mpqh8lijgIrl7aFYUPIUbSsGaJtYYbFm\nJ9eSZ9gwH08B9F3YUEvgV56gGryW/2hN3moRugcFv4K8m22v3i0F7Sx0VFj9nUq2\nBZFPx8Pl9vex0ocBDBYaXNoMheb86mTB/aojkkRI4vTbxwfsXXSEUCe1x9BzgI4I\nKTKh5kberN6yGtt4nvALfm9ktSATmzc5PgFNHfEt12zAJEfqZooJi1ZsVKLmoP+h\njqeGPUEJn+Sc2VbII3NZO+oLEWba6YWuo0SSTRgpMV6Iuj6lNKvt9lEJpIvw8l0y\n9cP2cqcWkHWzwjjaDLcA+RdcMeFxajkTWOQ1QzPNQQKBgQDMN7Fe7V+vWSEqlb7a\nMXaMvV7VdpKCv+cKj8+nn78NquQYZJlyU8RlCyBhE7pa5T7FtEpXoCuHvkG7m3vQ\npTLAW4xVqNVLM9YLQT7nhqdrDtPRHIJEeRW3rIFxk50M9d2pCkguF2+3F3MORdHh\nMvm7nMNwMQ83OH2M2YTtyVXEcQKBgQC7TX2C+6PQXEQBVkS2u2qsHY8IRwZZ+Z1p\n2/pR659c7rFzswfAvT/taz63CAQiWhQbj5pWxt0LNfOu5W37JHt3umUq1MMVZRqg\nuc28qt6jt7HE658ZVauzDSniHwEv2/svPsbS1Pz4Mv7ysBvqsFXZxrqfcRo7APy0\n9AzdglDFEQKBgDTazTtmcHdvuBfPff/3AVnXwW26LJ1Okbu4EOSvgcFF05dEojpm\n19PXF2BIvNi9sIt26C7Zs6qEYXru+RK9Tu9eQmoBMoMuPV3YWzGNNlONGOFsYYLb\nW/WX3kDJFcK+98nCcYAMbMuUdCDjjTid+ujF4AdviyKdqlEEE1V/4IThAoGAYnZ2\nCKlokFwwk9NaBAW6KgjP7DYKLLp/+epeSTpoaF5CguQWq0fRl2nNakKYicZ405RG\nOmAIS6BtHgAWNPQUw/gEvuNiOpkPynZipU/eAorKtQ54cMUMoe/FmM1bvmESRt/l\nfWfiJEgKpmHWCyXvu7Aw4yh99Y6rSiURrlCXTUECgYAYd17TdP19R5YGs1txsBMZ\no2JkansimAI/gv3AU54dmo1075omqXgq3XGg/Tmt8z9Jc/13aNVvTGCObxTTADSO\n5+ZckH+xEBevAXxKVcXsFpSFAyZGHP4Nos8VVAaUX/QP12D7Eh7SK6BvkJrj8kYv\nRPgQ6wzKxmwtzyn3XOJ0pA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "api-607@lijer-step-2020.iam.gserviceaccount.com",
+  "client_id": "113282533835524844260",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/api-607%40lijer-step-2020.iam.gserviceaccount.com"
+}
