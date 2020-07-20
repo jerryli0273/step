@@ -178,3 +178,4 @@ public final class FindMeetingQuery {
      */
     private ArrayList<String[]> optionalAttendeesPermutation =
             new ArrayList<String[]>();
+}
